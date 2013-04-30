@@ -1,0 +1,37 @@
+package $(PackageName);
+
+import starling.display.Quad;
+import starling.display.Sprite;
+import starling.events.Event;
+
+/**
+$(CBI)* ...
+$(CBI)* @author $(DefaultUser)
+$(CBI)*/
+
+class Game extends Sprite
+{
+
+	public function new() 
+	{
+		super();
+		addEventListener(Event.ADDED_TO_STAGE, onAdded);
+		addEventListener(Event.REMOVED_FROM_STAGE, onRemoved);
+	}
+		
+	private function onAdded(e:Event):Void 
+	{
+		removeEventListener(Event.ADDED_TO_STAGE, onAdded);
+		
+		//write your code here
+	}
+	
+	private function onRemoved(e:Event):Void 
+	{
+		removeEventListener(Event.REMOVED_FROM_STAGE, onRemoved);
+		removeChildren(0, -1, true);
+		
+		//don't forget to remove listeners and dispose textures for proper work of garbage collection
+	}
+	
+}

@@ -1,0 +1,2 @@
+HaxeBuilder.exe -release
+pause
