@@ -175,7 +175,7 @@ Section Uninstall
    DeleteRegValue ${env_hkcu} HAXE_BUILDER
    ; make sure windows knows about the change
    SendMessage ${HWND_BROADCAST} ${WM_WININICHANGE} 0 "STR:Environment" /TIMEOUT=5000
-    ${un.EnvVarUpdate} $0 "PATH" "R" "HKCU" "%HAXE_BUILDER%;"
+    ${un.EnvVarUpdate} $0 "PATH" "R" "HKCU" "%HAXE_BUILDER%"
   
   SetAutoClose true
 SectionEnd
