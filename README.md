@@ -10,6 +10,10 @@ And currently you can use it only If you have installed Haxe compiler.(Tested on
 Maybe later I will make it work with any text editor.
 And maybe it will work in Linux later.
 
+### Binary distribution
+1. There is avalable installer for HaxeBuilder 1.0(Windows)
+ * https://dl.dropboxusercontent.com/u/107033883/HaxeBuilder.exe
+
 ### Installation instructions
 1. Run setup.exe and install HaxeBuilder.
 2. Installer should ask you to install FlashDevelop Templates,
@@ -39,6 +43,21 @@ If closed Flash Debugger Window, and you want to open it again, run __"preview_s
 2. You should have FlashDevelop.
 3. Open HaxeBuilder.hxproj with FlashDevelop and build project
 
+It would be much easier if you create installer using NSIS. You will need to build __script.nsi__.
+If you want to do it manual, here is instruction
+1. Add environment variable named "HAXE_BUILDER" and set it to HaxeBuilder subfolder "bin".
+ * So it should look something like this: C:\Program Files\HaxeBuilder\bin
+2. (optional) This is not really reqired, but it simplifies usage. Add it to your PATH environment var, like this:
+ * Just add %HAXE_BUILDER% to your PATH. 
+ * You can add it temporarily using command line set PATH=%PATH%;%HAXE_BUILDER%
+
+### Usage instructions
+1. Locate to folder where .hxproj located
+2. Run HaxeBuilder in that folder
+ 
+If you using FlashDevelop template, then it does that automatically for you.
+Run Stopper to stop HaxeBuilder or just close console window.
+
 ### Known Issues
 1. Looks like there is a problem with reloading flash files that use Stage3D. 
   * In this case you can use HaxeBuilder as just tool that rebuilds every time you make changes. 
@@ -47,5 +66,3 @@ If closed Flash Debugger Window, and you want to open it again, run __"preview_s
 If you got ideas/encountered bugs, you can tweet me at @As3Boyan.
 
 Contributions are welcome.
-
-Maybe later program will have a GUI, and I will list all contributors somewhere.
