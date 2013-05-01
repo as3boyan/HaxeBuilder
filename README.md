@@ -45,6 +45,7 @@ If closed Flash Debugger Window, and you want to open it again, run __"preview_s
 
 It would be much easier if you create installer using NSIS(You will need also ExecCmd plugin for NSIS). You will need to build __script.nsi__.
 If you want to do it manual, here is instruction
+
 1. Add environment variable named "HAXE_BUILDER" and set it to HaxeBuilder subfolder "bin".
  * So it should look something like this: C:\Program Files\HaxeBuilder\bin
 2. (optional) This is not really reqired, but it simplifies usage. Add it to your PATH environment var, like this:
