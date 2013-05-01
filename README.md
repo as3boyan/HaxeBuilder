@@ -43,7 +43,7 @@ If closed Flash Debugger Window, and you want to open it again, run __"preview_s
 2. You should have FlashDevelop.
 3. Open HaxeBuilder.hxproj with FlashDevelop and build project
 
-It would be much easier if you create installer using NSIS. You will need to build __script.nsi__.
+It would be much easier if you create installer using NSIS(You will need also ExecCmd plugin for NSIS). You will need to build __script.nsi__.
 If you want to do it manual, here is instruction
 1. Add environment variable named "HAXE_BUILDER" and set it to HaxeBuilder subfolder "bin".
  * So it should look something like this: C:\Program Files\HaxeBuilder\bin
@@ -63,6 +63,17 @@ Run Stopper to stop HaxeBuilder or just close console window.
   * In this case you can use HaxeBuilder as just tool that rebuilds every time you make changes. 
   * That will keep swf up to date.
 
-If you got ideas/encountered bugs, you can tweet me at @As3Boyan.
+### TODO
+ * Stage3D support
+ * Linux support
+ * AS3 support(building using Flex SDK)
+ * Ability to work with any text editor(if you make .hxml file)
+
+HaxeBuilder needs testing with different libraries.
+
+### Tested libraries
+ * Actuate - works fine
+
+If you got ideas/questions/problems with installing/encountered bugs, you can tweet me at @As3Boyan.
 
 Contributions are welcome.
