@@ -50,6 +50,8 @@ If you want to do it manual, here is instruction
 2. (optional) This is not really reqired, but it simplifies usage. Add it to your PATH environment var, like this:
  * Just add %HAXE_BUILDER% to your PATH. 
  * You can add it temporarily using command line set PATH=%PATH%;%HAXE_BUILDER%
+3. Many IDE put "bin" folders of projects to User Flash Player Trust directory. You will need to create HaxeBuilder.cfg that contain path to HaxeBuilder's "bin" folder and place it to User Flash Player Trust directory.
+ * You can read more about this here: http://help.adobe.com/en_US/as3/dev/WS5b3ccc516d4fbf351e63e3d118a9b90204-7c85.html#WS5b3ccc516d4fbf351e63e3d118a9b90204-7c91
 
 ### Usage instructions
 1. Locate to folder where .hxproj located
