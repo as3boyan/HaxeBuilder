@@ -1,0 +1,25 @@
+-cp src
+-neko bin\Stopper.n
+-main Stopper
+-dce full
+--next
+-cp src
+-neko bin\LaunchSWF.n
+-main LaunchSWF
+-dce full
+--next
+-cp src
+-swf bin/SWFLoaderhaxe.swf
+-swf-header 640:480:60:FFFFFF
+-swf-version 11.5
+-main SWFLoader
+-debug
+-D fdb
+--next
+-cp src
+-neko bin\HaxeBuilder.n
+-main Main
+-dce full
+-cmd "nekotools boot bin\Stopper.n"
+-cmd "nekotools boot bin\LaunchSWF.n"
+-cmd "nekotools boot bin\HaxeBuilder.n"

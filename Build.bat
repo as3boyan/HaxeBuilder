@@ -1,0 +1,2 @@
+bin\HaxeBuilder2 build_only_haxebuilder.hxml
+pause

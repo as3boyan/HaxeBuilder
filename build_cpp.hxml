@@ -1,0 +1,23 @@
+-cmd "erase bin\cpp\*.exe"
+-cp src
+-cpp bin\cpp\Stopper
+-main Stopper
+-prompt
+-dce full
+--next
+-cp src
+-cpp bin\cpp\LaunchSWF
+-main LaunchSWF
+-prompt
+-dce full
+--next
+-cp src
+-cpp bin\cpp\HaxeBuilder
+-main Main
+-dce full
+-prompt
+-cmd "xcopy bin\cpp\Stopper\Stopper.exe bin\cpp"
+-cmd "xcopy bin\cpp\LaunchSWF\LaunchSWF.exe bin\cpp"
+-cmd "xcopy bin\cpp\HaxeBuilder\Main.exe bin\cpp"
+-cmd "sleep 1"
+-cmd "rename bin\cpp\Main.exe HaxeBuilder.exe"
