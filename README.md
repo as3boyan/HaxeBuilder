@@ -11,7 +11,7 @@ Maybe later I will make it work with any text editor.
 And maybe it will work in Linux later.
 
 ### Binary distribution
-1. There is avalable installer for HaxeBuilder 1.0(Windows)
+1. There is avalable installer for HaxeBuilder 1.0.1(Windows)
  * https://dl.dropboxusercontent.com/u/107033883/HaxeBuilder.exe
 
 ### Installation instructions
