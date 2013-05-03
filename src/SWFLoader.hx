@@ -55,6 +55,8 @@ class SWFLoader
 	private var swf_path_req:URLRequest;
 	private var swf_path:String;
 	private var swf_path_available:Bool;
+	var date_valid:Bool;
+	var last_build_date:Date;
 	
 	public function new()
 	{				
@@ -65,12 +67,15 @@ class SWFLoader
 		Std.parseInt("1");
 		Std.is(1, Int);
 		
+		Timer.delay(function () { }, 1);
+		Lib.getTimer();
+		
 		date_text = new TextField();
 		date_text.autoSize = TextFieldAutoSize.LEFT;
 		Lib.current.stage.addChild(date_text);
 		
 		debug_text = new TextField();
-		debug_text.text = "2";
+		debug_text.text = "";
 		debug_text.y = 100;
 		debug_text.autoSize = TextFieldAutoSize.LEFT;
 		Lib.current.stage.addChild(debug_text);
@@ -181,7 +186,21 @@ class SWFLoader
 			{		
 				date_text.text = "";
 				
-				var last_build_date = Date.fromString(loaded_date);
+				date_valid = true;
+				
+				try
+				{
+					last_build_date = Date.fromString(loaded_date);
+				}
+				catch (unknown:Dynamic)
+				{
+					date_valid = false;
+				}
+				
+				if (!date_valid)
+				{
+					return;
+				}
 				
 				if (build_date != null)
 				{
@@ -220,6 +239,7 @@ class SWFLoader
 		{
 			//myloader.load(req, myloadercontext);
 			myloader.load(req);
+			Lib.current.stage.addChild(debug_text);
 		}
 		catch (e:Error)
 		{
@@ -277,7 +297,7 @@ class SWFLoader
 				
 			//}
 			Lib.current.stage.removeChildren(1);
-			//myloader.unload();
+			myloader.unload();
 			//myloader.unloadAndStop(true);
 			if (Lib.current.stage.stage3Ds[0].context3D != null)
 			{

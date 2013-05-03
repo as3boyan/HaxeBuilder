@@ -39,12 +39,13 @@
   </hiddenPaths>
   <!-- Executed before build -->
   <preBuildCommand>haxe -cp src -neko bin\Stopper.n -main Stopper
-nekotools boot bin\Stopper.n
 haxe -cp src -neko bin\LaunchSWF.n -main LaunchSWF
-nekotools boot bin\LaunchSWF.n
+
 haxe -cp src -swf bin/SWFLoaderhaxe.swf -swf-header 640:480:60:FFFFFF -swf-version 11.5 -main SWFLoader -debug -D fdb</preBuildCommand>
   <!-- Executed after build -->
-  <postBuildCommand alwaysRun="False">nekotools boot bin\HaxeBuilder.n</postBuildCommand>
+  <postBuildCommand alwaysRun="False">nekotools boot bin\Stopper.n
+nekotools boot bin\LaunchSWF.n
+nekotools boot bin\HaxeBuilder.n</postBuildCommand>
   <!-- Other project options -->
   <options>
     <option showHiddenPaths="False" />

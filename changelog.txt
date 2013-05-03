@@ -1,2 +1,12 @@
+HaxeBuilder 1.0.1
+- HaxeBuilder now can work without FlashDevelop(it searches for .hxml or .nmml files)
+- HaxeBuilder now can build specified .hxml build file(it will not show result)
+- Faster compilation for Haxe\AS3 projects(NME compilation is slow, because it needs running long chain of commands)
+- NME projects support(needs testing and still needs additional work)
+- NME template
+- Fixed hang when output folder doesn't exist
+- Minor bug fix
+- Now compiled using cpp
+
 HaxeBuilder 1.0
 - Initial Release
