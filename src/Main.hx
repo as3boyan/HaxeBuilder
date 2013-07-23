@@ -663,6 +663,22 @@ class Main
 			}
 		}
 		
+		var classpaths:Fast = fast.node.classpaths;
+		
+		for (class_element in classpaths.elements)
+		{
+			if (class_element.has.path)
+			{
+				if (class_element.att.path.indexOf(":\\") != -1)
+				{
+					haxe_compiler_args += " -cp " + class_element.att.path;
+				}
+				else
+				{				
+					haxe_compiler_args += running_path + "\\" + class_element.att.path;
+				}
+			}
+		}
 		
 		if (fast.hasNode.library)
 		{
